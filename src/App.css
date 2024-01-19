@@ -1,0 +1,117 @@
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* Logo on the left, Nav links in the middle, Buttons on the right */
+  align-items: center;
+  padding: 20px;
+  color: black;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a svg {
+  margin-right: 5px;
+}
+
+.navbar-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: black;
+  margin-left: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+button:hover{
+  background-color: #54B275;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  border: none;
+}
+
+.planner-btn{
+  background-color: #54B275;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  border: none; 
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+}
+
+.list-body h1{
+  color: black;
+}
+
+.list-body p{
+  color: #889394;
+}
+
+.list-body:hover{
+  background-color: #F6E0E3;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #333;
+    z-index: 1;
+  }
+
+  .nav-links.mobile {
+    display: flex;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+}
